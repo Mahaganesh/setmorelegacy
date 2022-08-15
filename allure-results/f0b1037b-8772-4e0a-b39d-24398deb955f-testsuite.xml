@@ -1,0 +1,19 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1660585153570' stop='1660585153571'>
+    <name>Setmore Legacy Login</name>
+    <title>Setmore Legacy Login</title>
+    <test-cases>
+        <test-case start='1660585153570' status='pending' stop='1660585153570'>
+            <name>sign up with setmore</name>
+            <title>sign up with setmore</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Test ignored</message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
