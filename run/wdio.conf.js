@@ -94,7 +94,7 @@ exports.config = {
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'https://my.setmore.com',
+    baseUrl: 'https://my.setmore.com/',
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
@@ -119,8 +119,6 @@ exports.config = {
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
     framework: 'mocha',
-
-    
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
@@ -143,14 +141,8 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         ui: 'bdd',
-        timeout: 100000
+        timeout: 60000
     },
-    
-    reporters: [['allure', {
-        outputDir: 'allure-results',
-        // disableWebdriverStepsReporting: true,
-        disableWebdriverScreenshotsReporting: false,
-    }]],
     //
     // =====
     // Hooks
@@ -233,11 +225,6 @@ exports.config = {
      * Hook that gets executed _after_ a hook within the suite starts (e.g. runs after calling
      * afterEach in Mocha)
      */
-     afterStep: async function (step, scenario, { error, duration, passed }, context) {
-        if (error) {
-          await browser.takeScreenshot();
-        }
-      }
     // afterHook: function (test, context, { error, result, duration, passed, retries }) {
     // },
     /**
