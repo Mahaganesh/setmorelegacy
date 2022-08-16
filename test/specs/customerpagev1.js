@@ -7,7 +7,7 @@ date.setSeconds(date.getSeconds() + 70);
 
 describe('Customer page', () => 
 {
-    xit('Create customer', async () => 
+    it('Create customer', async () => 
     {
         await browser.url('/')
         await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
@@ -41,9 +41,9 @@ describe('Customer page', () =>
         await browser.saveScreenshot('screenshot/'+date+'screenshot.png')
 
     });
-    xit('Creating multiple customers', async() => {
+    it('Creating multiple customers', async() => {
         await browser.url('/')
-        await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
+        // await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
         // await WaitUntill.WaitUntil2("//h1[@class='left page-name']", 'Calendar')
 
         await browser.waitUntil(async () => (await $("//h1[@class='left page-name']").getText()) === 'Calendar',

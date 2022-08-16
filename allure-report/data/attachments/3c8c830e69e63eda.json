@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//*[@id=\"settingsSideNav\"]/ul/li[3]/a/span"
-}

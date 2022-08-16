@@ -7,7 +7,7 @@ date.setSeconds(date.getSeconds() + 70);
 
 describe('Setmore Class Legacy', ()=>
 {
-    xit('Create Class', async()=>
+    it('Create Class', async()=>
     {
         await browser.url('/')
         await loginn.login('mahaganesh2@setmore.com', 'I2password@97')

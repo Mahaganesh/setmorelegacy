@@ -6,7 +6,7 @@ date.setSeconds(date.getSeconds() + 70);
 
 describe('Setmore Service Legacy', () =>
 {
-    xit('Create appointment with booking page', async () =>
+    it('Create appointment with booking page', async () =>
     {
         await browser.url('/')
         await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
@@ -70,12 +70,13 @@ describe('Setmore Service Legacy', () =>
 
         await browser.closeWindow()
         await browser.switchToWindow(handles[0])
+    
     }),
 
     it('Service page URL', async() => 
     {
         await browser.url('/')
-        await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
+        // await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
         await browser.waitUntil(
             async () => (await $("//h1[@class='left page-name']").getText()) === 'Calendar',
             {
