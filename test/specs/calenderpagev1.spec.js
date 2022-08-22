@@ -1,22 +1,16 @@
 const loginn = require('../pageobjects/login.page')
-
+const waitforvalue = require('../pageobjects/wait.page')
 
 let date = new Date();
 date.setSeconds(date.getSeconds() + 70);
 
 describe('Setmore Service Legacy', () =>
 {
-    it('Create appointment from calender page', async () =>
+    xit('Create appointment from calender page', async () =>
     {
         await browser.url('/')
         await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
-        // await WaitUntill.WaitUntil2("//h1[@class='left page-name']", 'Calendar')
-        await browser.waitUntil(async () => (await $("//h1[@class='left page-name']").getText()) === 'Calendar',
-            {
-                timeout: 30000,
-                timeoutMsg: 'Timeout Calender page'
-            }
-        )
+        await waitforvalue.waitforcalender()
         await browser.waitUntil(async () => (await $("//div[@id='cal-date']").getText()),
             {
                 timeout: 30000,
@@ -41,20 +35,15 @@ describe('Setmore Service Legacy', () =>
                 // }
             // }
         }
-        await $('//*[@id="voice-box"]').waitForDisplayed({ reverse: true, timeout: 30000 });
+        await waitforvalue.waitforerrormsg()
         await browser.saveScreenshot('screenshot/'+date+'screenshot.png')
 
     }),
-    it('Calender page select date', async ()=>
+    xit('Calender page select date', async ()=>
     {
         await browser.url('/')
         // await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
-        await browser.waitUntil(async () => (await $("//h1[@class='left page-name']").getText()) === 'Calendar',
-            {
-                timeout: 30000,
-                timeoutMsg: 'Timeout Calender page'
-            }
-        )
+        await waitforvalue.waitforcalender()
         await browser.waitUntil(async () => (await $("//div[@id='cal-date']").getText()),
             {
                 timeout: 30000,
@@ -69,7 +58,7 @@ describe('Setmore Service Legacy', () =>
             if(await a[i].getText() == 'User2123'.toUpperCase())
             {
                 await a[i].click()
-                await $('//*[@id="voice-box"]').waitForDisplayed({ reverse: true, timeout: 30000 });
+                await waitforvalue.waitforerrormsg()
                 break
             }
         }

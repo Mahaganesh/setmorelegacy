@@ -2,7 +2,7 @@ const loginn = require('../pageobjects/login.page')
 
 describe("Setmore Legacy Login", ()=>
 {
-    it('sign up with setmore', async ()=>
+    xit('sign up with setmore', async ()=>
     {
         await browser.url('/')
         await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
