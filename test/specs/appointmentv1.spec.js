@@ -7,7 +7,7 @@ date.setSeconds(date.getSeconds() + 70);
 
 describe('Appointment Booking', () => 
 {
-    xit('Appointment created from customer page', async () => 
+    it('Appointment created from customer page', async () => 
     {
         await browser.url('/')
         await loginn.login('mahaganesh2@setmore.com', 'I2password@97')

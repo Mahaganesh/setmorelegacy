@@ -7,7 +7,7 @@ let date = new Date();
 date.setSeconds(date.getSeconds() + 70);
 
 describe('Customer page', () => {
-    xit('Create customer', async () => {
+    it('Create customer', async () => {
         await browser.url('/')
         await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
         await waitforvalue.waitforcalender()
@@ -29,7 +29,7 @@ describe('Customer page', () => {
 
     });
 
-    xit('Creating multiple customers', async () => {
+    it('Creating multiple customers', async () => {
         await browser.url('/')
         // await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
         await waitforvalue.waitforcalender()

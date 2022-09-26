@@ -7,7 +7,7 @@ date.setSeconds(date.getSeconds() + 70);
 
 describe('Setmore Service Legacy', ()=>
 {
-    xit('Create Service', async()=>
+    it('Create Service', async()=>
     {
         await browser.url('/')
         await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
@@ -33,7 +33,7 @@ describe('Setmore Service Legacy', ()=>
         await browser.saveScreenshot('screenshot/'+date+'screenshot.png')
     }),
 
-    xit('Creating Multiple Service', async()=>
+    it('Creating Multiple Service', async()=>
     {
         for(let i=0;i<=5;i++)
         {

@@ -7,7 +7,7 @@ date.setSeconds(date.getSeconds() + 70);
 
 describe('Setmore Staff Legacy', ()=>
 {
-    xit('Create Staff', async ()=>
+    it('Create Staff', async ()=>
     {
         await browser.url('/')
         await loginn.login('maha21.setmore@gmail.com', 'I2password@97')
@@ -38,7 +38,7 @@ describe('Setmore Staff Legacy', ()=>
         await browser.saveScreenshot('screenshot/'+date+'screenshot.png')
     }),
 
-    xit('Delete Staff', async ()=>
+    it('Delete Staff', async ()=>
     {
         let a = await $$("//ul[@id='resource-list']/li/a/span")
         console.log(a.length)
