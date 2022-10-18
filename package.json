@@ -13,7 +13,10 @@
     },
     "scripts": {
         "wdio": "wdio run wdio.conf.js",
-        "allurereport": "allure generate allure-results --clean && allure open"
+        "allurereport": "allure generate allure-results --clean && allure open",
+        "runall" : "wdio run wdio.conf.js && allure generate allure-results --clean && allure open",
+        "Retesting": "wdio run wdio.retesting.conf.js",
+        "validation1" : "wdio run wdio.validation.conf.js"
     },
     "dependencies": {
         "allure-commandline": "^2.18.1"

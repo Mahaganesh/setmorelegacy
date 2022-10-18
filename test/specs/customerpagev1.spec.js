@@ -7,11 +7,11 @@ let date = new Date();
 date.setSeconds(date.getSeconds() + 70);
 
 describe('Customer page', () => {
-    it('Create customer', async () => {
+    xit('Create customer', async () => {
         await browser.url('/')
         await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
         await waitforvalue.waitforcalender()
-        
+        await waitforvalue.waitforerrormsg()
         await $("//a[@id='side-nav-customers']").click()
         await waitforvalue.waitforcustomerlist()
         await $("//a[@id='newCustomer']").click()
@@ -29,10 +29,11 @@ describe('Customer page', () => {
 
     });
 
-    it('Creating multiple customers', async () => {
+    xit('Creating multiple customers', async () => {
         await browser.url('/')
         // await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
         await waitforvalue.waitforcalender()
+        await waitforvalue.waitforerrormsg()
         await $("//a[@id='side-nav-customers']").click()
         await waitforvalue.waitforcustomerlist()
         for (let i = 0; i <= 5; i++) {

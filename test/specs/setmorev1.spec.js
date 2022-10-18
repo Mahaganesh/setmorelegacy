@@ -2,7 +2,7 @@ const loginn = require('../pageobjects/login.page')
 
 describe("Setmore Legacy Login", ()=>
 {
-    it('sign up with setmore', async ()=>
+    xit('sign up with setmore', async ()=>
     {
         await browser.url('/')
         await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
@@ -13,6 +13,7 @@ describe("Setmore Legacy Login", ()=>
                 timeoutMsg: 'Timeout Calender page'
             }
         );
+        await waitforvalue.waitforerrormsg()
         await $("//a[@class='settings-icon']").click()
         await browser.waitUntil(
             async () => (await $('//*[@id="settingsSideNav"]/ul/li[3]/a/span').getText()) === 'Services',

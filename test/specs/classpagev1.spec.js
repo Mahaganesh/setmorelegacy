@@ -7,11 +7,12 @@ date.setSeconds(date.getSeconds() + 70);
 
 describe('Setmore Class Legacy', ()=>
 {
-    it('Create Class', async()=>
+    xit('Create Class', async()=>
     {
         await browser.url('/')
         await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
         await waitforvalue.waitforcalender()
+        await waitforvalue.waitforerrormsg()
         await $("//a[@class='settings-icon']").click()
         await waitforvalue.waitforservice()
         await $('//*[@id="settingsSideNav"]/ul/li[5]/a/span').click()

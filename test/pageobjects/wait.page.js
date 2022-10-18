@@ -30,13 +30,11 @@ class Waitforvalue extends Page {
         );
     }
 
-    async waitforerrormsg() 
-    {
+    async waitforerrormsg() {
         await $('//*[@id="voice-box"]').waitForDisplayed({ reverse: true, timeout: 30000 });
     }
 
-    async waitforallservice()
-    {
+    async waitforallservice() {
         await browser.waitUntil(
             async () => (await $('//*[@id="servicesListHeader"]/ul/li/h3').getText()) === 'All Services',
             {
@@ -45,6 +43,10 @@ class Waitforvalue extends Page {
             }
         )
     }
+
+    // get xpathsetmore () {
+    //     await $("//a[@class='settings-icon']");
+    // }
 }
 
 module.exports = new Waitforvalue();

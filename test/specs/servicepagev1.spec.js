@@ -7,12 +7,12 @@ date.setSeconds(date.getSeconds() + 70);
 
 describe('Setmore Service Legacy', ()=>
 {
-    it('Create Service', async()=>
+    xit('Create Service', async()=>
     {
         await browser.url('/')
         await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
         await waitforvalue.waitforcalender()
-
+        await waitforvalue.waitforerrormsg()
         await $("//a[@class='settings-icon']").click()
         await waitforvalue.waitforservice()
         await $('//*[@id="settingsSideNav"]/ul/li[3]/a/span').click()
@@ -33,7 +33,7 @@ describe('Setmore Service Legacy', ()=>
         await browser.saveScreenshot('screenshot/'+date+'screenshot.png')
     }),
 
-    it('Creating Multiple Service', async()=>
+    xit('Creating Multiple Service', async()=>
     {
         for(let i=0;i<=5;i++)
         {

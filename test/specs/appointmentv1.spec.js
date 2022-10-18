@@ -3,11 +3,11 @@ const waitforvalue = require('../pageobjects/wait.page')
 
 
 let date = new Date();
-date.setSeconds(date.getSeconds() + 70);
+date.setSeconds(date.getSeconds());
 
 describe('Appointment Booking', () => 
 {
-    it('Appointment created from customer page', async () => 
+    xit('Appointment created from customer page', async () => 
     {
         await browser.url('/')
         await loginn.login('mahaganesh2@setmore.com', 'I2password@97')
